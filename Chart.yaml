@@ -26,7 +26,10 @@ appVersion: "1.16.0"
 dependencies:
   - name: bolt-api
     repository: http://bolt-helm-charts.acaisoft.net
-    version: 0.1.0
+    version: 0.2.0
   - name: bolt-portal-chart-tmp
+    repository: http://bolt-helm-charts.acaisoft.net
+    version: 0.1.0
+  - name: bolt-worfkflow
     repository: http://bolt-helm-charts.acaisoft.net
     version: 0.1.0
