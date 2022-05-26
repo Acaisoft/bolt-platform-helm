@@ -5,5 +5,8 @@ dependencies:
 - name: bolt-portal-chart-tmp
   repository: http://bolt-helm-charts.acaisoft.net
   version: 0.1.0
-digest: sha256:6ef9f36a45431440c6e4a474aaef2c79f29c8f7cec0027a5316090fa24a8eaba
-generated: "2022-05-25T16:05:25.586093+02:00"
+- name: ingress-nginx
+  repository: https://kubernetes.github.io/ingress-nginx
+  version: 4.1.2
+digest: sha256:4cd3f1ef255204cac2766a7c112627f0b42683a0ed99f094259294ff0099bc96
+generated: "2022-05-26T12:49:23.398583+02:00"
