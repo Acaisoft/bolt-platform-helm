@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "bolt-platform-helm.fullname" . }}-test-connection"
+  labels:
+    {{- include "bolt-platform-helm.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "bolt-platform-helm.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

@@ -1,0 +1,9 @@
+dependencies:
+- name: bolt-api
+  repository: http://bolt-helm-charts.acaisoft.net
+  version: 0.1.0
+- name: bolt-portal-chart-tmp
+  repository: http://bolt-helm-charts.acaisoft.net
+  version: 0.1.0
+digest: sha256:6ef9f36a45431440c6e4a474aaef2c79f29c8f7cec0027a5316090fa24a8eaba
+generated: "2022-05-25T16:05:25.586093+02:00"
