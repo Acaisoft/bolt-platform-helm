@@ -8,5 +8,8 @@ dependencies:
 - name: bolt-worfkflow
   repository: http://bolt-helm-charts.acaisoft.net
   version: 0.1.0
-digest: sha256:627ac583b489c8a4b479a80fc400ffda51c4ebe3bd93815db32f7ba6cd66d2bc
-generated: "2022-05-26T15:50:09.002043+02:00"
+- name: ingress-nginx
+  repository: https://kubernetes.github.io/ingress-nginx
+  version: 4.1.2
+digest: sha256:a531252a66dcb870274a49c2fab93d4e8b7806bfa04cadba628df803507143bb
+generated: "2022-05-26T15:59:38.286737+02:00"
