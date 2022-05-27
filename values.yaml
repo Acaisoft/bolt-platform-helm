@@ -119,6 +119,9 @@ bolt-worfkflow:
       tag: stable
       pullPolicy: IfNotPresent
 
+# ----------------------------------------------
+# INGRESS-NGINX --------------------------------
+# ----------------------------------------------
 ingress-nginx:
   defaultBackend:
     enabled: false
