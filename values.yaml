@@ -16,24 +16,24 @@ global:
 # ----------------------------------------------
 bolt-api:
   environment:
-    BUCKET_PRIVATE_STORAGE: ""
-    BUCKET_PUBLIC_UPLOADS: ""
-    CONFIG_VERSION: ""
-    HASURA_GQL: ""
-    HCE_DEBUG: ""
-    JWT_ALGORITHM: ""
-    KEYCLOAK_CLIENT_ID: ""
-    KEYCLOAK_REALM_NAME: ""
-    KEYCLOAK_URL: ""
-    UPLOADS_PUBSUB_SUBSCRIPTION: ""
+    BUCKET_PRIVATE_STORAGE: "PLACEHOLDER"
+    BUCKET_PUBLIC_UPLOADS: "PLACEHOLDER"
+    CONFIG_VERSION: "PLACEHOLDER"
+    HASURA_GQL: "PLACEHOLDER"
+    HCE_DEBUG: "PLACEHOLDER"
+    JWT_ALGORITHM: "PLACEHOLDER"
+    KEYCLOAK_CLIENT_ID: "PLACEHOLDER"
+    KEYCLOAK_REALM_NAME: "PLACEHOLDER"
+    KEYCLOAK_URL: "PLACEHOLDER"
+    UPLOADS_PUBSUB_SUBSCRIPTION: "PLACEHOLDER"
 
   secrets: |
-    GOOGLE_APPLICATION_CREDENTIALS = ""
-    HASURA_GRAPHQL_ACCESS_KEY = ""
-    KEYCLOAK_CLIENT_SECRET = ""
-    KEYCLOAK_SECRET_KEY = ""
-    SECRETS_VERSION = ""
-    SENTRY_DSN = ""
+    GOOGLE_APPLICATION_CREDENTIALS = "PLACEHOLDER"
+    HASURA_GRAPHQL_ACCESS_KEY = "PLACEHOLDER"
+    KEYCLOAK_CLIENT_SECRET = "PLACEHOLDER"
+    KEYCLOAK_SECRET_KEY = "PLACEHOLDER"
+    SECRETS_VERSION = "PLACEHOLDER"
+    SENTRY_DSN = "PLACEHOLDER"
 
   replicaCount: 2
   image:
@@ -75,14 +75,14 @@ bolt-portal:
       nginx.ingress.kubernetes.io/ssl-redirect: "true"
       nginx.ingress.kubernetes.io/tls-acme: "true"
     hosts:
-      - host: example.com
+      - host: PLACEHOLDER
         paths:
           - path: /
             pathType: Prefix
     tls:
-      - secretName: chart-example-tls
+      - secretName: PLACEHOLDER
         hosts:
-          - example.com
+          - PLACEHOLDER
 
   resources:
     requests:
@@ -138,23 +138,23 @@ argo:
       nginx.ingress.kubernetes.io/ssl-redirect: "true"
       nginx.ingress.kubernetes.io/tls-acme: "true"
     hosts:
-      - host: example.com
+      - host: PLACEHOLDER
         paths:
           - path: /
             pathType: Prefix
     tls:
-      - secretName: chart-example-tls
+      - secretName: PLACEHOLDER
         hosts:
-          - example.com
+          - PLACEHOLDER
 
 # ----------------------------------------------
 # HASURA ---------------------------------------
 # ----------------------------------------------
 hasura:
   environment:
-    HASURA_GRAPHQL_DATABASE_URL: ""
-    HASURA_GRAPHQL_ACCESS_KEY: ""
-    HASURA_GRAPHQL_JWT_SECRET: ""
+    HASURA_GRAPHQL_DATABASE_URL: "PLACEHOLDER"
+    HASURA_GRAPHQL_ACCESS_KEY: "PLACEHOLDER"
+    HASURA_GRAPHQL_JWT_SECRET: "PLACEHOLDER"
     HASURA_GRAPHQL_DEV_MODE: "true"
   ingress:
     enabled: true
@@ -170,14 +170,14 @@ hasura:
       nginx.ingress.kubernetes.io/proxy-read-timeout: "240"
       nginx.ingress.kubernetes.io/proxy-send-timeout: "240"
     hosts:
-      - host: example.com
+      - host: PLACEHOLDER
         paths:
           - path: /
             pathType: Prefix
     tls:
-      - secretName: chart-example-tls
+      - secretName: PLACEHOLDER
         hosts:
-        - example.com
+        - PLACEHOLDER
 
 # ----------------------------------------------
 # INGRESS-NGINX --------------------------------
