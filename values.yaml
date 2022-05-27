@@ -1,7 +1,7 @@
 # ----------------------------------------------
-# API ------------------------------------------
+# GLOBAL ---------------------------------------
 # ----------------------------------------------
-bolt-api:
+global:
   id_rsa: |
     PLACEHOLDER
   id_rsa_pub: |
@@ -11,6 +11,10 @@ bolt-api:
   google_service_account: |
     PLACEHOLDER
 
+# ----------------------------------------------
+# API ------------------------------------------
+# ----------------------------------------------
+bolt-api:
   environment:
     BUCKET_PRIVATE_STORAGE: ""
     BUCKET_PUBLIC_UPLOADS: ""
@@ -119,6 +123,33 @@ bolt-worfkflow:
       tag: stable
       pullPolicy: IfNotPresent
 
+# ----------------------------------------------
+# ARGO WORKFLOWS -------------------------------
+# ----------------------------------------------
+argo:
+  ingress:
+    enabled: true
+    className: ""
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: "true"
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/tls-acme: "true"
+    hosts:
+      - host: example.com
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+      - secretName: chart-example-tls
+        hosts:
+          - example.com
+
+# ----------------------------------------------
+# INGRESS-NGINX --------------------------------
+# ----------------------------------------------
 ingress-nginx:
   defaultBackend:
     enabled: false
