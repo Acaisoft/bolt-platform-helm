@@ -1,12 +1,15 @@
 dependencies:
 - name: bolt-api
   repository: http://bolt-helm-charts.acaisoft.net
-  version: 0.1.0
+  version: 0.2.0
 - name: bolt-portal-chart-tmp
   repository: http://bolt-helm-charts.acaisoft.net
   version: 0.1.0
+- name: bolt-workflow
+  repository: http://bolt-helm-charts.acaisoft.net
+  version: 0.2.0
 - name: ingress-nginx
   repository: https://kubernetes.github.io/ingress-nginx
   version: 4.1.2
-digest: sha256:4cd3f1ef255204cac2766a7c112627f0b42683a0ed99f094259294ff0099bc96
-generated: "2022-05-26T12:49:23.398583+02:00"
+digest: sha256:c37d5af9e4b86ab89dc402b08cd06298276b8719f0a77fbc4822d28f2fc59d75
+generated: "2022-05-26T16:06:19.976801+02:00"
