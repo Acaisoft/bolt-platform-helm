@@ -1,7 +1,7 @@
 dependencies:
 - name: bolt-api
   repository: http://bolt-helm-charts.acaisoft.net
-  version: 0.2.0
+  version: 0.3.0
 - name: bolt-portal
   repository: http://bolt-helm-charts.acaisoft.net
   version: 0.2.0
@@ -14,5 +14,5 @@ dependencies:
 - name: cert-manager
   repository: https://charts.jetstack.io
   version: v1.7.2
-digest: sha256:de61f6767470fae52cf3a5195327b09a2fd8d6dfda030ee2b9b7993ff5b42286
-generated: "2022-05-27T10:15:55.662685+02:00"
+digest: sha256:81529637a23ca5b86cf04a6ac3b5afa40f5f0a2b5804702007df8af4c573eb08
+generated: "2022-05-27T12:32:56.839757+02:00"
