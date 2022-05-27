@@ -21,3 +21,6 @@
 .idea/
 *.tmproj
 .vscode/
+
+# argo license
+templates/argo/LICENSE
