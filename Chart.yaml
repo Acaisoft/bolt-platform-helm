@@ -27,9 +27,9 @@ dependencies:
   - name: bolt-api
     repository: http://bolt-helm-charts.acaisoft.net
     version: 0.2.0
-  - name: bolt-portal-chart-tmp
+  - name: bolt-portal
     repository: http://bolt-helm-charts.acaisoft.net
-    version: 0.1.0
+    version: 0.2.0
   - name: bolt-workflow
     repository: http://bolt-helm-charts.acaisoft.net
     version: 0.2.0
