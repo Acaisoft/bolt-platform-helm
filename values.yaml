@@ -169,15 +169,15 @@ hasura:
       nginx.ingress.kubernetes.io/proxy-connect-timeout: "240"
       nginx.ingress.kubernetes.io/proxy-read-timeout: "240"
       nginx.ingress.kubernetes.io/proxy-send-timeout: "240"
-      hosts:
-        - host: example.com
-          paths:
-            - path: /
-              pathType: Prefix
-      tls:
-        - secretName: chart-example-tls
-          hosts:
-          - example.com
+    hosts:
+      - host: example.com
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+      - secretName: chart-example-tls
+        hosts:
+        - example.com
 
 # ----------------------------------------------
 # INGRESS-NGINX --------------------------------
