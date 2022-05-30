@@ -30,7 +30,7 @@ spec:
                     values:
                       - load-tests-workers-masters
       containers:
-      - image: hasura/graphql-engine:v2.4.0
+      - image: hasura/graphql-engine:v2.4.0.cli-migrations-v3
         imagePullPolicy: IfNotPresent
         name: hasura
         env:
@@ -54,7 +54,7 @@ spec:
           value: "true"
         ## enable debugging mode. It is recommended to disable this in production
         - name: HASURA_GRAPHQL_DEV_MODE
-          value: {{ .Values.hasura.environment.HASURA_GRAPHQL_DEV_MODE }}
+          value: "{{ .Values.hasura.environment.HASURA_GRAPHQL_DEV_MODE }}"
         - name: HASURA_GRAPHQL_ENABLE_REMOTE_SCHEMA_PERMISSIONS
           value: "false"
         - name: BOLT_API_GRAPHQL
