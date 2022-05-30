@@ -26,13 +26,13 @@ appVersion: "1.16.0"
 dependencies:
   - name: bolt-api
     repository: http://bolt-helm-charts.acaisoft.net
-    version: 0.3.0
+    version: 0.4.0
   - name: bolt-portal
     repository: http://bolt-helm-charts.acaisoft.net
     version: 0.2.0
   - name: bolt-workflow
     repository: http://bolt-helm-charts.acaisoft.net
-    version: 0.2.0
+    version: 0.2.1
   - name: ingress-nginx
     repository: https://kubernetes.github.io/ingress-nginx
     version: 4.1.2
