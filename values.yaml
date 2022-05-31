@@ -16,31 +16,17 @@ global:
 # ----------------------------------------------
 bolt-api:
   environment:
-    BUCKET_PRIVATE_STORAGE: "PLACEHOLDER"
-    BUCKET_PUBLIC_UPLOADS: "PLACEHOLDER"
     CONFIG_VERSION: "PLACEHOLDER"
     HASURA_GQL: "PLACEHOLDER"
     HCE_DEBUG: "PLACEHOLDER"
     JWT_ALGORITHM: "PLACEHOLDER"
-    KEYCLOAK_CLIENT_ID: "PLACEHOLDER"
-    KEYCLOAK_REALM_NAME: "PLACEHOLDER"
-    KEYCLOAK_URL: "PLACEHOLDER"
-    UPLOADS_PUBSUB_SUBSCRIPTION: "PLACEHOLDER"
 
   secrets: |
     GOOGLE_APPLICATION_CREDENTIALS = "PLACEHOLDER"
     HASURA_GRAPHQL_ACCESS_KEY = "PLACEHOLDER"
-    KEYCLOAK_CLIENT_SECRET = "PLACEHOLDER"
-    KEYCLOAK_SECRET_KEY = "PLACEHOLDER"
     SECRETS_VERSION = "PLACEHOLDER"
-    SENTRY_DSN = "PLACEHOLDER"
 
   replicaCount: 2
-  image:
-    repository: eu.gcr.io/acai-bolt/bolt-api
-    tag: latest
-  nodeSelector:
-    group: default
   resources:
     requests:
       cpu: 200m
@@ -54,12 +40,6 @@ bolt-api:
 # ----------------------------------------------
 bolt-portal:
   replicaCount: 2
-
-  image:
-    repository: eu.gcr.io/acai-bolt/bolt-portal
-    pullPolicy: IfNotPresent
-    # Overrides the image tag whose default is the chart appVersion.
-    tag: latest
 
   service:
     type: ClusterIP
@@ -107,21 +87,11 @@ bolt-worfkflow:
     # so the app will be able to create Workflow resource in this namespace.
     argoNamespace: argo
 
-    image:
-      repository: eu.gcr.io/acai-bolt/workflow-creator
-      tag: latest
-      pullPolicy: Always
-
   # ----------------------------------------------
   # TERMINATOR -----------------------------------
   # ----------------------------------------------
   terminator:
     replicaCount: 1
-
-    image:
-      repository: eu.gcr.io/acai-bolt/bolt-workflow-termiantor
-      tag: stable
-      pullPolicy: IfNotPresent
 
 # ----------------------------------------------
 # ARGO WORKFLOWS -------------------------------
