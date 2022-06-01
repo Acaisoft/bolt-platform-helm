@@ -21,6 +21,30 @@ bolt-api:
     HCE_DEBUG: "PLACEHOLDER"
     JWT_ALGORITHM: "PLACEHOLDER"
 
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: 'true'
+      nginx.ingress.kubernetes.io/force-ssl-redirect: 'true'
+      nginx.ingress.kubernetes.io/proxy-connect-timeout: '240'
+      nginx.ingress.kubernetes.io/proxy-read-timeout: '240'
+      nginx.ingress.kubernetes.io/proxy-send-timeout: '240'
+      nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+      nginx.ingress.kubernetes.io/tls-acme: 'true'
+    hosts:
+      - host: PLACEHOLDER
+        paths:
+          - path: /auth/
+            pathType: Prefix
+          - path: /static/
+            pathType: Prefix
+    tls:
+      - secretName: PLACEHOLDER
+        hosts:
+          - PLACEHOLDER
+
   secrets: |
     GOOGLE_APPLICATION_CREDENTIALS = "PLACEHOLDER"
     HASURA_GRAPHQL_ACCESS_KEY = "PLACEHOLDER"
