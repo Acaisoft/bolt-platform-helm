@@ -55,8 +55,6 @@ bolt-api:
     AUTH_PASSWORD = "PLACEHOLDER"
     JWT_AUTH_PUB_KEY = "PLACEHOLDER"
     JWT_AUTH_PRIV_KEY = "PLACEHOLDER"
-    WORKFLOW_CREATOR_ENDPOINT = 'http://bolt-workflow-creator.bolt-workflow-creator.svc.cluster.local/workflows'
-    WORKFLOW_TERMINATE_ENDPOINT = 'http://bolt-workflow-terminator.bolt-workflow-terminator.svc.cluster.local/workflow-termination' 
 
   replicaCount: 2
   resources:
