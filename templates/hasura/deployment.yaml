@@ -54,19 +54,19 @@ spec:
           value: "true"
         ## enable debugging mode. It is recommended to disable this in production
         - name: HASURA_GRAPHQL_DEV_MODE
-          value: "{{ .Values.hasura.environment.HASURA_GRAPHQL_DEV_MODE }}"
+          value: {{ .Values.hasura.environment.HASURA_GRAPHQL_DEV_MODE | quote }}
         - name: HASURA_GRAPHQL_ENABLE_REMOTE_SCHEMA_PERMISSIONS
           value: "false"
         - name: BOLT_API_GRAPHQL
-          value: http://bolt-api.bolt-api.svc.cluster.local/graphql
+          value: http://{{ .Release.Name }}-bolt-api.{{ .Release.Namespace }}.svc.cluster.local/graphql
         - name: BOLT_API_EXECUTION_STATE_CHANGE
-          value: http://bolt-api.bolt-api.svc.cluster.local/webhooks/execution/update
+          value: http://{{ .Release.Name }}-bolt-api.{{ .Release.Namespace }}.svc.cluster.local/webhooks/execution/update
         - name: BOLT_API_CONFIGURATION_PARAM_CHANGE
-          value: http://bolt-api.bolt-api.svc.cluster.local/webhooks/configuration_param/update
+          value: http://{{ .Release.Name }}-bolt-api.{{ .Release.Namespace }}.svc.cluster.local/webhooks/configuration_param/update
         - name: BOLT_API_EXECUTION_REQUESTS_INSERT
-          value: http://bolt-api.bolt-api.svc.cluster.local/webhooks/execution_requests/insert
+          value: http://{{ .Release.Name }}-bolt-api.{{ .Release.Namespace }}.svc.cluster.local/webhooks/execution_requests/insert
         - name: BOLT_API_EXECUTION_STAGE_LOG_INSERT
-          value: http://bolt-api.bolt-api.svc.cluster.local/webhooks/execution_stage_log/insert
+          value: http://{{ .Release.Name }}-bolt-api.{{ .Release.Namespace }}.svc.cluster.local/webhooks/execution_stage_log/insert
         ports:
         - containerPort: 8080
           protocol: TCP
