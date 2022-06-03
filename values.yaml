@@ -204,3 +204,16 @@ ingress-nginx:
 # ----------------------------------------------
 cert-manager:
   installCRDs: true
+
+cluster-issuer:
+  enabled: true
+  spec:
+    acme:
+      email: PLACEHOLDER
+      solvers: 
+      - http01:
+          ingress:
+            class: nginx
+      privateKeySecretRef:
+        name: letsencrypt-prod
+      server: https://acme-v02.api.letsencrypt.org/directory
