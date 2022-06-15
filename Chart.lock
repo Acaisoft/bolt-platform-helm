@@ -1,7 +1,7 @@
 dependencies:
 - name: bolt-api
   repository: http://bolt-helm-charts.acaisoft.net
-  version: 0.6.0
+  version: 0.7.0
 - name: bolt-portal
   repository: http://bolt-helm-charts.acaisoft.net
   version: 0.2.0
@@ -17,5 +17,5 @@ dependencies:
 - name: argo-workflows
   repository: https://argoproj.github.io/argo-helm
   version: 0.16.2
-digest: sha256:5ab86c479fcc2271ec97ff234d7daa94853c2e3194b95fbd8a165974a6ae576a
-generated: "2022-06-08T14:23:45.23562+02:00"
+digest: sha256:6c1192155c726fb9bb8349ba67c47889a819df83879be4865c027e21090e2dc0
+generated: "2022-06-15T11:06:13.135766+02:00"
