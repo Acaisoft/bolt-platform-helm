@@ -11,11 +11,8 @@ dependencies:
 - name: ingress-nginx
   repository: https://kubernetes.github.io/ingress-nginx
   version: 4.1.2
-- name: cert-manager
-  repository: https://charts.jetstack.io
-  version: v1.7.2
 - name: argo-workflows
   repository: https://argoproj.github.io/argo-helm
   version: 0.16.2
-digest: sha256:6c1192155c726fb9bb8349ba67c47889a819df83879be4865c027e21090e2dc0
-generated: "2022-06-15T11:06:13.135766+02:00"
+digest: sha256:1f5cea4fa622a894a5e0faaac8426e7d5ac37e94b91cf8f3953075b241d497b7
+generated: "2022-06-23T11:51:44.322222+02:00"
