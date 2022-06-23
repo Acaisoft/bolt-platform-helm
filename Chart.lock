@@ -11,8 +11,5 @@ dependencies:
 - name: ingress-nginx
   repository: https://kubernetes.github.io/ingress-nginx
   version: 4.1.2
-- name: cert-manager
-  repository: https://charts.jetstack.io
-  version: v1.7.2
-digest: sha256:4fca44a51f4c109ba9dc313f24df974624aae00bc22c0fe9632e9e68b641ba3d
-generated: "2022-06-02T13:39:04.127654+02:00"
+digest: sha256:c319aba8f24f626ad474b3544b7e30466c52c13c38c2cf21046c1735ee21cdcc
+generated: "2022-06-23T09:17:29.78056+02:00"
