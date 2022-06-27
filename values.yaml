@@ -16,11 +16,11 @@ global:
 # ----------------------------------------------
 bolt-api:
   environment:
-    CONFIG_VERSION: "PLACEHOLDER"
-    HASURA_GQL: "PLACEHOLDER"
-    HCE_DEBUG: "PLACEHOLDER"
-    JWT_ALGORITHM: "PLACEHOLDER"
+    CONFIG_VERSION: PLACEHOLDER
+    HCE_DEBUG: '"PLACEHOLDER"'
+    JWT_ALGORITHM: '"PLACEHOLDER"'
     JWT_VALID_PERIOD: PLACEHOLDER
+    ARGO_CONTAINER_RESOURCES: '{"default":{"limits":{"cpu":"110m","memory":"220Mi"},"requests":{"cpu":"100m","memory":"200Mi"}},"master":{"limits":{"cpu":"410m","memory":"520Mi"},"requests":{"cpu":"400m","memory":"500Mi"}},"worker":{"limits":{"cpu":"840m","memory":"950Mi"},"requests":{"cpu":"800m","memory":"900Mi"}}}'
 
   ingress:
     enabled: true
