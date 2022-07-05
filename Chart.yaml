@@ -26,7 +26,7 @@ appVersion: "1.16.0"
 dependencies:
   - name: bolt-api
     repository: http://bolt-helm-charts.acaisoft.net
-    version: 0.11.0
+    version: 0.12.0
   - name: bolt-portal
     repository: http://bolt-helm-charts.acaisoft.net
     version: 0.2.0
@@ -39,3 +39,6 @@ dependencies:
   - name: argo-workflows
     repository: https://argoproj.github.io/argo-helm
     version: 0.16.2
+  - name: hasura
+    repository: https://hasura-extra.github.io/hasura-extra
+    version: 2.3.0

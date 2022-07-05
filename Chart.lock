@@ -1,7 +1,7 @@
 dependencies:
 - name: bolt-api
   repository: http://bolt-helm-charts.acaisoft.net
-  version: 0.11.0
+  version: 0.12.0
 - name: bolt-portal
   repository: http://bolt-helm-charts.acaisoft.net
   version: 0.2.0
@@ -14,5 +14,8 @@ dependencies:
 - name: argo-workflows
   repository: https://argoproj.github.io/argo-helm
   version: 0.16.2
-digest: sha256:61902445bac16295f921ca30d87b07c8641498bb6e142d731a1c4311fe2fbad2
-generated: "2022-06-27T13:13:50.3672+02:00"
+- name: hasura
+  repository: https://hasura-extra.github.io/hasura-extra
+  version: 2.3.0
+digest: sha256:a3d7b047838a99bc06c703b1df21c843500f51e784f0550d9c7dc2840455150b
+generated: "2022-07-04T13:31:03.21049+02:00"
