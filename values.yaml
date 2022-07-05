@@ -103,27 +103,6 @@ bolt-portal:
       memory: 512Mi
 
 # ----------------------------------------------
-# WORKFLOW -------------------------------------
-# ----------------------------------------------
-bolt-worfkflow:
-  # ----------------------------------------------
-  # CREATOR --------------------------------------
-  # ----------------------------------------------
-  creator:
-    replicaCount: 1
-
-    # The service creates argoproj.io/v1alpha1 Workflows
-    # This helm chart will create cluster role and bind it to given namespace
-    # so the app will be able to create Workflow resource in this namespace.
-    argoNamespace: argo
-
-  # ----------------------------------------------
-  # TERMINATOR -----------------------------------
-  # ----------------------------------------------
-  terminator:
-    replicaCount: 1
-
-# ----------------------------------------------
 # ARGO WORKFLOWS -------------------------------
 # ----------------------------------------------
 argo-workflows:
@@ -151,11 +130,26 @@ argo-workflows:
 # HASURA ---------------------------------------
 # ----------------------------------------------
 hasura:
-  environment:
-    HASURA_GRAPHQL_DATABASE_URL: "PLACEHOLDER"
-    HASURA_GRAPHQL_ACCESS_KEY: "PLACEHOLDER"
-    HASURA_GRAPHQL_JWT_SECRET: "PLACEHOLDER"
-    HASURA_GRAPHQL_DEV_MODE: "true"
+  jwtSecret: PLACEHOLDER
+  corsDomain: '*'
+  image:
+    tag: v2.6.1.cli-migrations-v3
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 5
+    targetCPUUtilizationPercentage: 80
+  dbUrl: 'PLACEHOLDER'
+  adminSecret: 'PLACEHOLDER'
+  devMode: 'true'
+  enableRemoteSchemaPermission: 'false'
+  extraEnvVarsCM:
+    # put helm release name and kubernetes namespace in below URLs PLACEHOLDERs
+    BOLT_API_GRAPHQL: http://PLACEHOLDER-bolt-api.PLACEHOLDER.svc.cluster.local/graphql
+    BOLT_API_EXECUTION_STATE_CHANGE: http://PLACEHOLDER-bolt-api.PLACEHOLDER.svc.cluster.local/webhooks/execution/update
+    BOLT_API_CONFIGURATION_PARAM_CHANGE: http://PLACEHOLDER-bolt-api.PLACEHOLDER.svc.cluster.local/webhooks/configuration_param/update
+    BOLT_API_EXECUTION_REQUESTS_INSERT: http://PLACEHOLDER-bolt-api.PLACEHOLDER.svc.cluster.local/webhooks/execution_requests/insert
+    BOLT_API_EXECUTION_STAGE_LOG_INSERT: http://PLACEHOLDER-bolt-api.PLACEHOLDER.svc.cluster.local/webhooks/execution_stage_log/insert
   ingress:
     enabled: true
     className: ""
