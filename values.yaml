@@ -103,27 +103,6 @@ bolt-portal:
       memory: 512Mi
 
 # ----------------------------------------------
-# WORKFLOW -------------------------------------
-# ----------------------------------------------
-bolt-worfkflow:
-  # ----------------------------------------------
-  # CREATOR --------------------------------------
-  # ----------------------------------------------
-  creator:
-    replicaCount: 1
-
-    # The service creates argoproj.io/v1alpha1 Workflows
-    # This helm chart will create cluster role and bind it to given namespace
-    # so the app will be able to create Workflow resource in this namespace.
-    argoNamespace: argo
-
-  # ----------------------------------------------
-  # TERMINATOR -----------------------------------
-  # ----------------------------------------------
-  terminator:
-    replicaCount: 1
-
-# ----------------------------------------------
 # ARGO WORKFLOWS -------------------------------
 # ----------------------------------------------
 argo-workflows:
