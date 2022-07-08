@@ -5,9 +5,6 @@ dependencies:
 - name: bolt-portal
   repository: http://bolt-helm-charts.acaisoft.net
   version: 0.2.0
-- name: bolt-workflow
-  repository: http://bolt-helm-charts.acaisoft.net
-  version: 0.2.1
 - name: ingress-nginx
   repository: https://kubernetes.github.io/ingress-nginx
   version: 4.1.2
@@ -17,5 +14,5 @@ dependencies:
 - name: hasura
   repository: https://hasura-extra.github.io/hasura-extra
   version: 2.3.0
-digest: sha256:a3d7b047838a99bc06c703b1df21c843500f51e784f0550d9c7dc2840455150b
-generated: "2022-07-04T13:31:03.21049+02:00"
+digest: sha256:b1d186a6929ad7d2cd4d540059f0159b49e296f255a738c27f953d720881e5d3
+generated: "2022-07-08T14:36:02.717978+02:00"
