@@ -1,7 +1,7 @@
 dependencies:
 - name: bolt-api
   repository: http://bolt-helm-charts.acaisoft.net
-  version: 0.12.0
+  version: 0.13.0
 - name: bolt-portal
   repository: http://bolt-helm-charts.acaisoft.net
   version: 0.2.0
@@ -14,5 +14,5 @@ dependencies:
 - name: hasura
   repository: https://hasura-extra.github.io/hasura-extra
   version: 2.3.0
-digest: sha256:b1d186a6929ad7d2cd4d540059f0159b49e296f255a738c27f953d720881e5d3
-generated: "2022-07-08T14:36:02.717978+02:00"
+digest: sha256:e2451d74e8ec7500f8b72b4d6a0f56e87ea79992002652d6d2829a875a2d10e8
+generated: "2022-08-01T09:22:13.183024+02:00"

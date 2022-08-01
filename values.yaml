@@ -65,6 +65,10 @@ bolt-api:
       cpu: 300m
       memory: 512Mi
 
+  coreProject: "PLACEHOLDER"
+  imageRegistry: "PLACEHOLDER"
+  logsBucket: "PLACEHOLDER"
+
 # ----------------------------------------------
 # PORTAL ---------------------------------------
 # ----------------------------------------------
